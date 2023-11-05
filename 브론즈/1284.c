@@ -3,7 +3,7 @@ int main(){
     int n;
     while(1){
         scanf("%d",&n);
-        int len=0;
+        int len=2;
         if(n==0) return 0;
         
         while(1){
@@ -15,7 +15,7 @@ int main(){
             n/=10;
             len+=1;
         }
-        printf("%d\n",len+2);
+        printf("%d\n",len);
     }
     return 0;
 }
