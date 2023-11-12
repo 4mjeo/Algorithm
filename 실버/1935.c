@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 double stack[100];
 int top=-1;
 int is_empty(){
