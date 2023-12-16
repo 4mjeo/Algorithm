@@ -6,7 +6,7 @@ int main(){
     long long int a[n];
     int r=n*2;
     for(int i=0;i<n;i++){
-        scanf("%d",&a[i]);
+        scanf("%lld",&a[i]);
         r += a[i]*2;
         if(i>0){
             r += abs(a[i]-a[i-1]);
