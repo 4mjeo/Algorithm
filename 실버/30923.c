@@ -1,18 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    long long int n;
+    long long int n,a,b,first;
     scanf("%lld",&n);
-    long long int a[n];
-    int r=n*2;
-    for(int i=0;i<n;i++){
-        scanf("%lld",&a[i]);
-        r += a[i]*2;
-        if(i>0){
-            r += abs(a[i]-a[i-1]);
-        }
+    int r = n*2;
+    scanf("%lld",&a);
+    first = a;
+    r += a*2;
+    b = a;
+    for(int i=1;i<n;i++){
+        scanf("%lld",&a);
+        r += a*2;
+        r += abs(a-b);
+        b = a;
     }
-    r += a[0]+a[n-1];
-    printf("%lld\n",r);
+    r += first+b;
+    printf("%lld",r);
     return 0;
 }
